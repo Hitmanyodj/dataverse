@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="DATAVERSE'26 is the ultimate collision of technology, art, and gaming. A next-gen technical symposium.">
+  <title>DATAVERSE'26 | Enter the Future</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  <!-- Output JS -->
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div id="cursor" class="cursor"></div>
+  <div id="cursor-tracker" class="cursor-tracker"></div>
+
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-content">
+      <h1 class="typing-text" id="typing-text"></h1>
+      <div class="progress-bar-container">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <div class="progress-text" id="progress-text">0%</div>
+    </div>
+  </div>
+
+  <!-- AI Network Background Canvas -->
+  <canvas id="network-canvas" class="network-bg"></canvas>
+  <div class="network-overlay"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="#hero">DATAVERSE<span class="neon-text">'26</span></a>
+      </div>
+      <div class="nav-links">
+        <a href="#verses">Verses</a>
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+      </div>
+      <div class="burger" id="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#verses" class="mobile-link">Verses</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#events" class="mobile-link">Events</a>
+  </div>
+
+  <!-- Main Content wrapper to allow scrolling over fixed canvas -->
+  <main class="content-wrapper">
+    
+    <!-- Hero Section -->
+    <section id="hero" class="sec-hero">
+      <div class="container hero-content">
+        <h1 class="hero-title glitch" data-text="Enter the DATAVERSE">Enter the DATAVERSE</h1>
+        <p class="hero-subtitle">3 Universes. Infinite possibilities. One Champion.</p>
+        <div class="hero-actions">
+          <a href="#verses" class="btn btn-neon">Enter the Verse</a>
+          <a href="#about" class="btn btn-glass">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Verses Section -->
+    <section id="verses" class="sec-verses">
+      <div class="container">
+        <h2 class="section-title">The Three Verses</h2>
+        <div class="verses-grid">
+          
+          <div class="verse-card" data-tilt>
+            <div class="card-glow primary"></div>
+            <div class="card-content">
+              <div class="verse-icon">💻</div>
+              <h3>TECHNICAL</h3>
+              <p></p>
+              <a href="#events" class="explore-link">Explore Systems →</a>
+            </div>
+          </div>
+          
+          <div class="verse-card" data-tilt>
+            <div class="card-glow secondary"></div>
+            <div class="card-content">
+              <div class="verse-icon">🧠</div>
+              <h3>NON-TECHNICAL</h3>
+              <p></p>
+              <a href="#events" class="explore-link">Explore Mind →</a>
+            </div>
+          </div>
+
+          <div class="verse-card" data-tilt>
+            <div class="card-glow accent"></div>
+            <div class="card-content">
+              <div class="verse-icon">💡</div>
+              <h3>SPECIAL</h3>
+              <p></p>
+              <a href="#events" class="explore-link">Explore Visions →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="sec-about">
+      <div class="container about-container glass-panel">
+        <div class="about-text">
+          <h2 class="section-title text-left">About The Simulation</h2>
+          <p>Experience three universes of competition and creativity. DATAVERSE'26 brings you Technical challenges to push your coding limits, Non-Technical brain teasers to test your problem-solving skills, and Special events to unleash your innovative ideas. Whether you code, think, or dream—there's a verse for you.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-box">
+            <h4 class="counter" data-target="100">100</h4>
+            <span>+</span>
+            <p>Participants</p>
+          </div>
+          <div class="stat-box">
+            <h4 class="counter" data-target="3">3</h4>
+            <p>Events</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="sec-events">
+      <div class="container">
+        <h2 class="section-title">Initiating Protocols <span class="dim">(Events)</span></h2>
+        
+        <div class="event-tabs">
+          <button class="tab-btn active" data-tab="tech">TECHNICAL</button>
+          <button class="tab-btn" data-tab="creative">NON-TECHNICAL</button>
+          <button class="tab-btn" data-tab="fun">SPECIAL</button>
+        </div>
+
+        <div class="event-content">
+          <!-- Tech Events -->
+          <div class="events-grid tab-panel active" id="tab-tech">
+            <div class="event-card glass-panel">
+              <div class="badge tag-tech">Code</div>
+              <h3>Coding Contest</h3>
+              <p>Test your coding ability.Fastest Coder wins</p>
+              <div class="event-meta"><span>🕒 2 Hrs</span> <span>👥 2 Per Team</span></div>
+              <a href="" class="btn btn-neon register-btn">Register Now</a>
+            </div>
+            
+          </div>
+
+          <!-- Creative Events -->
+          <div class="events-grid tab-panel" id="tab-creative">
+            <div class="event-card glass-panel">
+              <div class="badge tag-creative">Tricky</div>
+              <h3>Bomb Defusal</h3>
+              <p>Use your brains and solve out all the tricky questions to defuse the bomb in time.</p>
+              <div class="event-meta"><span>🕒 2 Hrs</span> <span>👥 2-4 Per Team</span></div>
+              <a href="" class="btn btn-neon register-btn">Register Now</a>
+            </div>
+           
+          </div>
+
+          <!-- Fun Events -->
+          <div class="events-grid tab-panel" id="tab-fun">
+            <div class="event-card glass-panel">
+              <div class="badge tag-fun">Idea</div>
+              <h3>Ideathon</h3>
+              <p>Present your creative ideas .</p>
+              <div class="event-meta"><span>🕒 2 Hrs</span> <span>👥 2-4 Per Team</span></div>
+              <a href="" class="btn btn-neon register-btn">Register Now</a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-content glass-panel">
+        <div class="footer-brand">
+          <h3>DATAVERSE<span class="neon-text">'26</span></h3>
+          <p>The ultimate technical symposium reality.</p>
+        </div>
+        <div class="footer-links">
+          
+          <a href="https://www.instagram.com/datanova_official?igsh=MXBxZjJ3bnY2enRpeA==">Instagram</a>
+        </div>
+        <div class="footer-copy">
+          <p>&copy; 2026 DATAVERSE Core Systems. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+</body>
+</html>

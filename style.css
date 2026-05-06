@@ -451,11 +451,29 @@ body.cursor-hover .cursor-tracker {
 .tag-tech { background: rgba(0, 243, 255, 0.1); color: var(--neon-blue); }
 .tag-creative { background: rgba(138, 43, 226, 0.1); color: var(--neon-purple); }
 .tag-fun { background: rgba(255, 0, 127, 0.1); color: var(--neon-pink); }
+.tag-quiz { background: rgba(255, 180, 0, 0.12); color: #ffb400; }
+.tag-art { background: rgba(0, 230, 160, 0.12); color: #00e6a0; }
 
 ..event-card h3 { font-size: 1.4rem; margin-bottom: 1rem; font-weight: 600; letter-spacing: -0.5px;}
 .event-card p { color: var(--text-light-dim); font-size: 0.95rem; margin-bottom: 2rem; line-height: 1.6;}
 .register-btn { margin-top: 2rem; }
 .event-meta { display: flex; justify-content: space-between; font-size: 0.85rem; color: #fff; opacity: 0.6; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); font-weight: 500;}
+
+.event-info-label {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  background: rgba(138, 43, 226, 0.08);
+  border: 1px solid rgba(138, 43, 226, 0.25);
+  border-radius: 12px;
+  font-size: 0.85rem;
+  color: rgba(200, 160, 255, 0.85);
+  font-style: italic;
+  letter-spacing: 0.3px;
+  line-height: 1.5;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
 
 /* =========================================
    Leaderboard Section

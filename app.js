@@ -27,7 +27,6 @@ const loadSmoothScroll = () => {
     document.head.appendChild(script);
 };
 
-// --- 2. Micro-Interactions (Buttons & Ripple) ---
 const initInteractions = () => {
     const buttons = document.querySelectorAll('.btn');
     buttons.forEach(btn => {
